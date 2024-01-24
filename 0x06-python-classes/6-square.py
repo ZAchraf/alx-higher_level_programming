@@ -5,14 +5,14 @@
 class Square:
     """ defining it"""
     
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         """new square.
 
         Args:
             size: new square siz.
             position: postion.
         """
-        self.__size = size
+        self.size = size
         self.position = position
 
     @property

@@ -8,7 +8,6 @@ class Square:
     def __init__(self, size):
         """Constructor.
 
-
         Args:
             size: length of the side.
         """
@@ -17,7 +16,6 @@ class Square:
     @property
     def size(self):
         """ the property.
-
 
         Raises:
             TypeError: size != int

@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 '''square, defining a rect subcl square'''
 Rectangle = __import__('9-rectangle').Rectangle
 

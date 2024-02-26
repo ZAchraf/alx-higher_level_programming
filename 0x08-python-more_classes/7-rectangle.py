@@ -1,22 +1,22 @@
 #!/usr/bin/python3
-"""Rectangle class."""
+"""rectangle."""
 
 
 class Rectangle:
-    """rectangle representation."""
+    """rectangle rep."""
 
     number_of_instances = 0
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        """rectangle initial."""
+        """rectangle init."""
         type(self).number_of_instances += 1
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Get/set the width."""
+        """Get/set the width"""
         return self.__width
 
     @width.setter
@@ -29,7 +29,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """Get/set the height."""
+        """Get/set the height"""
         return self.__height
 
     @height.setter
@@ -41,24 +41,23 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """rectangle area."""
+        """ectangle area."""
         return (self.__width * self.__height)
 
     def perimeter(self):
-        """rectangle per."""
+        """ectangle perimetr."""
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        """rectangle printable rep.
-        """
+        """rectangle printable rep."""
         if self.__width == 0 or self.__height == 0:
             return ("")
 
         rect = []
         for i in range(self.__height):
-            [rect.append('#') for j in range(self.__width)]
+            [rect.append(str(self.print_symbol)) for j in range(self.__width)]
             if i != self.__height - 1:
                 rect.append("\n")
         return ("".join(rect))
@@ -70,6 +69,6 @@ class Rectangle:
         return (rect)
 
     def __del__(self):
-        """rectangle deletion msg."""
+        """rectangle delition msg."""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")

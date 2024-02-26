@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-"""defining a rectangle class."""
+"""Rectangle class."""
 
 
 class Rectangle:
-    """representing a rectangle."""
+    """rectangle representation."""
 
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
-        """new rectangle initializing."""
-	type(self).number_of_instances += 1
+        """rectangle initial."""
+        type(self).number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -44,15 +44,13 @@ class Rectangle:
         return (self.__width * self.__height)
 
     def perimeter(self):
-        """rectangle peremter."""
+        """rectangle per."""
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        """rectangle s printable representation.
-
-        representing the rectangle with the # char.
+        """rectangle printable rep.
         """
         if self.__width == 0 or self.__height == 0:
             return ("")
@@ -65,11 +63,12 @@ class Rectangle:
         return ("".join(rect))
 
     def __repr__(self):
-        """str representetif of rectangle."""
+        """rectangle str rep."""
         rect = "Rectangle(" + str(self.__width)
         rect += ", " + str(self.__height) + ")"
         return (rect)
 
     def __del__(self):
-        """after deletion of rectangle, print a message."""
+        """rectangle deletion msg."""
+        type(self).number_of_instances -= 1
         print("Bye rectangle...")

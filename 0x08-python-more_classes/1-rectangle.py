@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Rect.defining the class"""
 
+
 class Rectangle:
     """the rectangle representation"""
 
@@ -11,8 +12,8 @@ class Rectangle:
             width (int): new rectangle width.
             height (int): new rectangle height.
         """
-        self.height = height
-	self.width = width
+        self.width = width
+	self.height = height
 
     @property
     def width(self):
